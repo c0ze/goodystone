@@ -35,7 +35,7 @@ func parseInstance(vals []string) string {
 }
 
 func (edp *UIDPacket) MapKey() string {
-	return fmt.Sprintf("EDY_%v", edp.Mac)
+	return MapKey(edp.Mac)
 }
 
 func (edp *UIDPacket) ToString() string {

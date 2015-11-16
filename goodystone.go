@@ -26,6 +26,10 @@ func GetType(str string) string {
 	return parseType(vals)
 }
 
+func MapKey(mac string) string {
+	return fmt.Sprintf("EDY_%v", mac)
+}
+
 func parseType(vals []string) string {
 	return vals[25]
 }

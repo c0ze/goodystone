@@ -48,7 +48,7 @@ func parseScheme(vals []string) string {
 }
 
 func (edp *URLPacket) MapKey() string {
-	return edp.Mac
+	return MapKey(edp.Mac)
 }
 
 func (edp *URLPacket) ToString() string {

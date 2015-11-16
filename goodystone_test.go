@@ -203,7 +203,8 @@ func TestToString(t *testing.T) {
 
 func TestMapKey(t *testing.T) {
 	uidP := NewUIDPacket(UidPacket1)
-	expectedStr := "EDD1EBEAC04E5DEFA017|EBB1CB1C7CC1"
+	//	expectedStr := "EDD1EBEAC04E5DEFA017|EBB1CB1C7CC1"
+	expectedStr := "EDY_EBB1CB1C7CC1"
 	if uidP.MapKey() != expectedStr {
 		t.Errorf("Parsing packet {%v} failed for packet1", uidP.MapKey())
 	}
@@ -214,7 +215,6 @@ func TestMapKey(t *testing.T) {
 	}
 
 	urlP := NewURLPacket(UrlPacket2)
-	expectedStr = "EBB1CB1C7CC1"
 	if urlP.MapKey() != expectedStr {
 		t.Errorf("Parsing packet {%v} failed for url packet2", urlP.MapKey())
 	}

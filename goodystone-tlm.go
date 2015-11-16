@@ -30,6 +30,10 @@ func NewTLMPacket(line string) *TLMPacket {
 		Rssi:        parseRssi(vals)}
 }
 
+func (tlp *TLMPacket) MapKey() string {
+	return MapKey(tlp.Mac)
+}
+
 func parseVersion(vals []string) string {
 	return vals[26]
 }
